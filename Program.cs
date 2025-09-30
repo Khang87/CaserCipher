@@ -16,7 +16,7 @@ namespace _22_CaserCipher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CaserCipher());
+            Application.Run(new Caser());
         }
     }
 }

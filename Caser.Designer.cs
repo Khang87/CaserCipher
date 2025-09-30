@@ -49,13 +49,14 @@
             this.lbl_Message.Size = new System.Drawing.Size(110, 16);
             this.lbl_Message.TabIndex = 0;
             this.lbl_Message.Text = "Message :";
-           
+            // 
             // txt_Message
             // 
             this.txt_Message.Location = new System.Drawing.Point(333, 52);
             this.txt_Message.Name = "txt_Message";
             this.txt_Message.Size = new System.Drawing.Size(392, 22);
             this.txt_Message.TabIndex = 1;
+            
             // 
             // lbl_Key
             // 
@@ -72,6 +73,11 @@
             this.NumUpDown_Key.Name = "NumUpDown_Key";
             this.NumUpDown_Key.Size = new System.Drawing.Size(120, 22);
             this.NumUpDown_Key.TabIndex = 3;
+            this.NumUpDown_Key.Maximum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             // 
             // lbl_Action
             // 
@@ -92,6 +98,7 @@
             this.rad_Encrypt.TabStop = true;
             this.rad_Encrypt.Text = "Encrypt";
             this.rad_Encrypt.UseVisualStyleBackColor = true;
+            this.rad_Encrypt.CheckedChanged += new System.EventHandler(this.rad_Encrypt_CheckedChanged);
             // 
             // rad_Decrypt
             // 
@@ -103,6 +110,7 @@
             this.rad_Decrypt.TabStop = true;
             this.rad_Decrypt.Text = "Decrypt";
             this.rad_Decrypt.UseVisualStyleBackColor = true;
+            this.rad_Decrypt.CheckedChanged += new System.EventHandler(this.rad_Decrypt_CheckedChanged);
             // 
             // txt_Result
             // 
@@ -128,6 +136,7 @@
             this.btn_EncryptMessage.TabIndex = 9;
             this.btn_EncryptMessage.Text = "Encrypt Message";
             this.btn_EncryptMessage.UseVisualStyleBackColor = true;
+            this.btn_EncryptMessage.Click += new System.EventHandler(this.btn_EncryptMessage_Click);
             // 
             // Caser
             // 

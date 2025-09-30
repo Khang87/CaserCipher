@@ -29,9 +29,46 @@ namespace _22_CaserCipher
                 return ch;
             }
         }
-        //private void label1_Click(object sender, EventArgs e)
-        //{
 
-        //}
+        private void rad_Encrypt_CheckedChanged(object sender, EventArgs e)
+        {
+            btn_EncryptMessage.Text = "Encrypt Message";
+        }
+
+        private void rad_Decrypt_CheckedChanged(object sender, EventArgs e)
+        {
+            btn_EncryptMessage.Text = "Decrypt Message";
+        }
+        private void encryptMessage(string msg,int k)
+        {
+           string result = "";
+            txt_Result.Text = "";
+            int len = msg.Length;
+            for(int i=0;i<len;i++)
+            {
+                result += EncryptChar(msg[i], k);
+            }
+            txt_Result.Text = result;
+        }
+        private void btn_EncryptMessage_Click(object sender, EventArgs e)
+        {
+            string msg = txt_Message.Text;
+            if (msg == "")
+            {
+                MessageBox.Show("Vui long nhap thong diep can ma hoa !");
+                return;
+            }
+            msg = msg.ToUpper();
+            int k = (int)NumUpDown_Key.Value;
+            if (rad_Encrypt.Checked)
+            {
+
+            }
+            else
+            {
+                k = 26 - k;
+            }
+            encryptMessage(msg, k);
+        }
     }
 }
